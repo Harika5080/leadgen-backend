@@ -1,0 +1,65 @@
+{
+  "captured_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "endpoints": {
+    "login": {
+      "method": "POST",
+      "path": "/auth/login",
+      "response": {"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsInRlbmFudF9pZCI6ImEwZWViYzk5LTljMGItNGVmOC1iYjZkLTZiYjliZDM4MGExMSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc3MDM0NzkxMCwiaWF0IjoxNzcwMzQ2MTEwLCJ0eXBlIjoiYWNjZXNzIn0.hvaMn4nCcTlHBe6ZZ9LBbP2e0b1n265mMA1P3_nVIUk","token_type":"bearer","expires_in":1800}
+    },
+    "me": {
+      "method": "GET",
+      "path": "/auth/me",
+      "response": {"id":"e0c1a833-ebdb-4c5d-afdb-4b51ff0ae5fd","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"admin@test.com","full_name":"Admin User","role":"admin","is_active":true,"last_login":"2026-02-06T02:48:30.442921Z","created_at":"2026-01-24T07:57:49.106650Z"}
+    },
+    "icps_list": {
+      "method": "GET",
+      "path": "/icps",
+      "response": {"detail":"Not Found"}
+    },
+    "icp_detail": {
+      "method": "GET",
+      "path": "/icps/790a0e94-f9d1-4714-a9aa-2eda9d0f601a",
+      "response": {"id":"790a0e94-f9d1-4714-a9aa-2eda9d0f601a","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","name":"Test ICP","description":"","qualification_threshold":0.7,"auto_qualify_threshold":0.9,"scoring_config":{},"is_active":true,"created_at":"2026-02-06T00:47:47.900198Z","updated_at":null,"scoring_rules_count":0,"scoring_rules":[]}
+    },
+    "icp_stats": {
+      "method": "GET",
+      "path": "/icps/790a0e94-f9d1-4714-a9aa-2eda9d0f601a/stats",
+      "response": {"total_leads":0,"qualified_leads":0,"average_fit_score":0.0,"conversion_rate":0.0,"last_updated":"2026-02-06T02:48:30.513356"}
+    },
+    "icp_scoring_rules": {
+      "method": "GET",
+      "path": "/icps/790a0e94-f9d1-4714-a9aa-2eda9d0f601a/scoring-rules",
+      "response": {"rules":[],"total":0}
+    },
+    "icp_data_sources": {
+      "method": "GET",
+      "path": "/icps/790a0e94-f9d1-4714-a9aa-2eda9d0f601a/data-sources",
+      "response": {"sources":[],"total":0}
+    },
+    "leads_list": {
+      "method": "GET",
+      "path": "/leads?limit=5",
+      "response": {"leads":[{"id":"890ba7d2-f036-4ddf-ac3b-a98b554335c6","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"Shanna@melissa.tv","first_name":"Ervin Howell","last_name":"Antonette","phone":"010-692-6593 x09125","job_title":null,"linkedin_url":null,"company_name":"Deckow-Crist","company_website":"anastasia.net","company_domain":null,"company_industry":null,"status":"new","fit_score":null,"email_verified":false,"email_deliverability_score":null,"reviewed_at":null,"reviewed_by":null,"review_decision":null,"review_notes":null,"exported_at":"2026-01-29T00:32:05.062343Z","source_name":"Connector","acquisition_timestamp":"2026-01-28T21:57:45.608171Z","created_at":"2026-01-28T21:57:45.606237Z","updated_at":"2026-01-29T00:32:05.062347Z"},{"id":"373f55ee-b874-483d-a830-6d03ff6a0034","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"Rey.Padberg@karina.biz","first_name":"Clementina DuBuque","last_name":"Moriah.Stanton","phone":"024-648-3804","job_title":null,"linkedin_url":null,"company_name":"Hoeger LLC","company_website":"ambrose.net","company_domain":null,"company_industry":null,"status":"new","fit_score":null,"email_verified":false,"email_deliverability_score":null,"reviewed_at":null,"reviewed_by":null,"review_decision":null,"review_notes":null,"exported_at":null,"source_name":"Connector","acquisition_timestamp":"2026-01-28T21:57:45.610536Z","created_at":"2026-01-28T21:57:45.606237Z","updated_at":"2026-01-28T21:57:45.606237Z"},{"id":"c1fa818e-274e-4956-b018-89e327581b0d","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"Sincere@april.biz","first_name":"Leanne Graham","last_name":"Bret","phone":"1-770-736-8031 x56442","job_title":null,"linkedin_url":null,"company_name":"Romaguera-Crona","company_website":"hildegard.org","company_domain":null,"company_industry":null,"status":"new","fit_score":null,"email_verified":false,"email_deliverability_score":null,"reviewed_at":null,"reviewed_by":null,"review_decision":null,"review_notes":null,"exported_at":"2026-01-29T00:32:05.062343Z","source_name":"Connector","acquisition_timestamp":"2026-01-28T21:57:45.607524Z","created_at":"2026-01-28T21:57:45.606237Z","updated_at":"2026-01-29T00:32:05.062347Z"},{"id":"49e1f7ee-ea81-43b8-b434-abb1c78af839","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"Nathan@yesenia.net","first_name":"Clementine Bauch","last_name":"Samantha","phone":"1-463-123-4447","job_title":null,"linkedin_url":null,"company_name":"Romaguera-Jacobson","company_website":"ramiro.info","company_domain":null,"company_industry":null,"status":"new","fit_score":null,"email_verified":false,"email_deliverability_score":null,"reviewed_at":null,"reviewed_by":null,"review_decision":null,"review_notes":null,"exported_at":null,"source_name":"Connector","acquisition_timestamp":"2026-01-28T21:57:45.608512Z","created_at":"2026-01-28T21:57:45.606237Z","updated_at":"2026-01-28T21:57:45.606237Z"},{"id":"91a50c99-6f97-4df3-b3a1-07fa31bb3c7a","tenant_id":"a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11","email":"Julianne.OConner@kory.org","first_name":"Patricia Lebsack","last_name":"Karianne","phone":"493-170-9623 x156","job_title":null,"linkedin_url":null,"company_name":"Robel-Corkery","company_website":"kale.biz","company_domain":null,"company_industry":null,"status":"new","fit_score":null,"email_verified":false,"email_deliverability_score":null,"reviewed_at":null,"reviewed_by":null,"review_decision":null,"review_notes":null,"exported_at":"2026-01-29T00:32:05.062343Z","source_name":"Connector","acquisition_timestamp":"2026-01-28T21:57:45.608814Z","created_at":"2026-01-28T21:57:45.606237Z","updated_at":"2026-01-29T00:32:05.062347Z"}],"pagination":{"page":1,"limit":5,"total":72,"total_pages":15,"has_next":true,"has_prev":false},"filters_applied":{"status":null,"source":null,"email_verified":null,"search":null}}
+    },
+    "sources_list": {
+      "method": "GET",
+      "path": "/sources",
+      "response": {"detail":"Not Found"}
+    },
+    "dashboard_stats": {
+      "method": "GET",
+      "path": "/analytics/dashboard",
+      "response": {"total_leads":72,"pending_review":2,"verified":5,"rejected":7,"today_count":0,"conversion_rate":6.94,"avg_score":1.65,"growth_rate":-100.0}
+    },
+    "pipeline_stats": {
+      "method": "GET",
+      "path": "/analytics/pipeline",
+      "response": {"new_leads":0,"enriched":69,"verified":15,"pending_review":2}
+    },
+    "recent_activity": {
+      "method": "GET",
+      "path": "/analytics/activity?limit=5",
+      "response": [{"id":"e8865a4d-1f30-4af3-aab8-2c614a685108","type":"reviewed","description":"robert.wilson791@cloudserve.com - rejected","timestamp":"2026-01-29T00:23:11.546614+00:00"},{"id":"b297d88b-abbf-4f57-ad59-8110bf736142","type":"verified","description":"william.smith667@cloudserve.com - approved","timestamp":"2026-01-29T00:23:00.252363+00:00"},{"id":"4fd0c549-92b1-435b-8d86-593311c6bb5a","type":"reviewed","description":"emily.williams722@techcorp.com - rejected","timestamp":"2026-01-27T15:33:21.372945+00:00"},{"id":"d8bde7cd-14a6-43da-81d9-354cf7db8db2","type":"reviewed","description":"john.brown455@aiinnovations.ai - rejected","timestamp":"2026-01-26T20:49:42.848217+00:00"},{"id":"d33d4d17-66f1-4f8f-b819-84fd5e5a7673","type":"verified","description":"emily.johnson360@cloudserve.com - approved","timestamp":"2026-01-26T19:25:34.353731+00:00"}]
+    },
+  }
+}

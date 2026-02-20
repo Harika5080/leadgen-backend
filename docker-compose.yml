@@ -1,0 +1,98 @@
+services:
+  db:
+    image: postgres:15
+    container_name: leadgen-db
+    environment:
+      POSTGRES_USER: leadgen
+      POSTGRES_PASSWORD: leadgen123
+      POSTGRES_DB: leadgen
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U leadgen"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - leadgen-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: leadgen-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - leadgen-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development  # Use development stage by default
+    container_name: leadgen-backend
+    ports:
+      - "8000:8000"
+    
+    # CRITICAL: Playwright needs more shared memory
+    shm_size: '2gb'
+    
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://leadgen:leadgen123@db:5432/leadgen
+      - REDIS_URL=redis://redis:6379/0
+      
+      # Scraper Engine - Apollo.io
+      - APOLLO_API_KEY=${APOLLO_API_KEY:-}
+      
+      # Scraper Engine - Oxylabs (LinkedIn)
+      - OXYLABS_USERNAME=${OXYLABS_USERNAME:-}
+      - OXYLABS_PASSWORD=${OXYLABS_PASSWORD:-}
+      - OXYLABS_COUNTRY=${OXYLABS_COUNTRY:-us}
+      
+      # Scraper Engine - LinkedIn Credentials
+      - LINKEDIN_EMAIL=${LINKEDIN_EMAIL:-}
+      - LINKEDIN_PASSWORD=${LINKEDIN_PASSWORD:-}
+      
+      # Email Verification - Verifella
+      - VERIFELLA_API_KEY=${VERIFELLA_API_KEY:-}
+      
+      # Playwright settings
+      - PLAYWRIGHT_BROWSERS_PATH=/root/.cache/ms-playwright
+      - PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+    
+    env_file:
+      - .env
+    
+    volumes:
+      - ./backend:/app
+      - playwright_cache:/root/.cache/ms-playwright  # Cache Playwright browsers
+    
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    
+    networks:
+      - leadgen-network
+    
+    # Override command for development
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  postgres_data:
+  redis_data:
+  playwright_cache:  # NEW: Cache for Playwright browsers
+
+networks:
+  leadgen-network:
+    driver: bridge

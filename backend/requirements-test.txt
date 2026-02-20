@@ -1,0 +1,28 @@
+# requirements-test.txt
+# Testing dependencies for ICP Engine
+
+# Core testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-xdist==3.5.0  # For parallel testing
+
+# Mocking and fixtures
+faker==20.1.0
+factory-boy==3.3.0
+freezegun==1.4.0  # For datetime mocking
+
+# Coverage and reporting
+coverage[toml]==7.3.2
+pytest-html==4.1.1
+
+# Code quality
+black==23.12.1
+flake8==6.1.0
+mypy==1.7.1
+isort==5.13.2
+
+# Additional utilities
+requests-mock==1.11.0  # For mocking HTTP requests
+responses==0.24.1  # Alternative HTTP mocking

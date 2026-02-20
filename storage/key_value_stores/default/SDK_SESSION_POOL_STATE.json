@@ -1,0 +1,127 @@
+{
+  "usableSessionsCount": 2,
+  "retiredSessionsCount": 0,
+  "sessions": [
+    {
+      "id": "session_lwIyB9DoUa",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-02-10T23:52:36.397Z",
+      "createdAt": "2026-02-10T23:02:36.397Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_NBPlZWyGdy",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "li_rm",
+            "value": "AQHpvxj73ok-YQAAAZxJyt7ilDkcxK7ehLVTxkz7iTw_S7MTUOndRVMLqE2PRpqiJ8kYxKdRj90wFqTnDFzbn9I0Peby04EoHFJCPoWkgB0kQv7qiop1JxVJ",
+            "expires": "2027-02-10T23:02:38.106Z",
+            "domain": "www.linkedin.com",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.145Z",
+            "lastAccessed": "2026-02-10T23:02:39.145Z"
+          },
+          {
+            "key": "bcookie",
+            "value": "\"v=2&3e5d2a13-0ca9-4332-8266-61944260c4c6\"",
+            "expires": "2027-02-10T23:02:38.106Z",
+            "domain": "linkedin.com",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.145Z",
+            "lastAccessed": "2026-02-10T23:02:39.145Z"
+          },
+          {
+            "key": "lidc",
+            "value": "\"b=VGST08:s=V:r=V:a=V:p=V:g=3374:u=1:x=1:i=1770764557:t=1770850957:v=2:sig=AQHDwxNhQcogUFI1_G2RnJ80ibL5r6Wf\"",
+            "expires": "2026-02-11T23:02:37.967Z",
+            "domain": "linkedin.com",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.147Z",
+            "lastAccessed": "2026-02-10T23:02:39.147Z"
+          },
+          {
+            "key": "bscookie",
+            "value": "\"v=1&2026021023023757f664ad-2c56-4d74-817e-c5e7f89da6e0AQFt8HZsWGkbmEbOmhxjVFtAKsbfOqTd\"",
+            "expires": "2027-02-10T23:02:38.106Z",
+            "domain": "www.linkedin.com",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.149Z",
+            "lastAccessed": "2026-02-10T23:02:39.149Z"
+          },
+          {
+            "key": "JSESSIONID",
+            "value": "ajax:9361151647009778320",
+            "expires": "2026-02-10T23:52:39.143Z",
+            "domain": "www.linkedin.com",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.149Z",
+            "lastAccessed": "2026-02-10T23:02:39.149Z"
+          },
+          {
+            "key": "lang",
+            "value": "v=2&lang=en-us",
+            "expires": "2026-02-10T23:52:39.143Z",
+            "domain": "linkedin.com",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.149Z",
+            "lastAccessed": "2026-02-10T23:02:39.149Z"
+          },
+          {
+            "key": "__cf_bm",
+            "value": "MH_9GhL3kZEAR6BOFzUFwFCy9V25Bew_k5Z0CZwgbv8-1770764557-1.0.1.1-oKOiMxmsYYaAQHF6VzI8edmqIRDXuqTgZamhvEkCJ_QRGgsNslfogDcaj8m_2Kvze5rsvP8ki.Ob311FP49rVVyiXodNExgDeGQpdbX2jn8",
+            "expires": "2026-02-10T23:32:37.967Z",
+            "domain": "linkedin.com",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-02-10T23:02:39.149Z",
+            "lastAccessed": "2026-02-10T23:02:39.149Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-02-10T23:52:36.399Z",
+      "createdAt": "2026-02-10T23:02:36.399Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "search_keywords": "VP Engineering",
+    "max_results": 10,
+    "data_source_id": "c2ffbc99-9c0b-4ef8-bb6d-6bb9bd380a33",
+    "backend_url": "http://localhost:8000",
+    
+    "backend_email": "admin@testcompany.com",
+    "backend_password": "testpassword123",
+    
+    "linkedin_email": "hafeezaj.khan@gmail.com",
+    "linkedin_password": "hafeez99"
+}
